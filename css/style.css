@@ -1,3 +1,9 @@
+/*
+ *
+ * Implementing Responsive Design Without a Framework (based on Bootstrap)
+ *
+ */
+
 body {
     font-family: 'Lato', sans-serif;
     color: #333;
@@ -5,33 +11,37 @@ body {
     box-sizing: border-box;
     margin: 0;
 }
-h4 {
-    font-size: 18px;
+header, footer {
+  display: block;
 }
 h3 {
     font-size: 20px;
     margin-top: 10px;
 }
+h4 {
+    font-size: 18px;
+}
 p {
     margin: 10px 0;
 }
-.container {
-    max-width: 1000px;
-    margin: 0 auto 0 auto;
-    background-color: #fff;
+
+/*
+ *
+ * Classes
+ *
+ */
+
+.project {
+    min-width: 100%;
+    padding-bottom: 15px;
 }
-.header-name {
-    font-family: 'Lato', sans-serif; font-weight: 300;
-    font-size: 30px;
+.shadow {
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
-.header-logo {
-    margin-top: 25px;
-}
-.featured {
-    margin: 10px 0 15px 0;
-    color: #aaa;
-    font-size: 26px;
-}
+
+/* Header Classes */
 .header {
     border-bottom: 1px solid #aaa;
     padding-bottom: 20px;
@@ -39,6 +49,15 @@ p {
     margin-right: 0;
     margin-left: 0;
 }
+.header-logo {
+    margin-top: 25px;
+}
+.header-name {
+    font-family: 'Lato', sans-serif; font-weight: 300;
+    font-size: 30px;
+}
+
+/* Footer Classes */
 .footer {
     border-top: 1px solid #aaa;
     padding: 20px;
@@ -49,14 +68,22 @@ p {
 .footer-link:hover {
     color: #aaa;
 }
-.project {
-    min-width: 100%;
-    padding-bottom: 15px;
+
+/* Text Classes */
+.featured {
+    margin: 10px 0 15px 0;
+    color: #aaa;
+    font-size: 26px;
 }
-.shadow {
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-       -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+/* Image Classes */
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-rounded {
+  border-radius: 6px;
 }
 .modalImg:hover {
     opacity: 0.7;
@@ -71,6 +98,9 @@ p {
  */
 
 .container {
+  max-width: 1000px;
+  margin: 0 auto 0 auto;
+  background-color: #fff;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -109,32 +139,43 @@ p {
  *
  */
 
-@media screen and (min-width: 500px) {
-    .header-name {
-        font-size: 34px;
-    }
-    .featured {
-        font-size: 30px;
-    }
-    .project {
-        min-width: 50%;
-    }
-    h3 {
-        font-size: 18px;
-    }
+@media (min-width: 500px) {
+  .header-name {
+      font-size: 34px;
+  }
+  .featured {
+      font-size: 30px;
+  }
+  .project {
+      min-width: 50%;
+  }
+  h3 {
+      font-size: 18px;
+  }
 }
-@media screen and (min-width: 768px) {
-    .header-name {
-        font-size: 52px;
-    }
-    .project {
-        min-width: 33%;
-    }
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .header-name {
+      font-size: 52px;
+  }
+  .project {
+      min-width: 33%;
+  }
 }
-@media screen and (min-width: 990px) {
-    h3 {
-        font-size: 22px;
-    }
+@media (min-width: 990px) {
+  .container {
+    width: 970px;
+  }
+  h3 {
+      font-size: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 
 /*
