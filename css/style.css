@@ -14,6 +14,12 @@ body {
 header, footer {
   display: block;
 }
+h1, h2, h3, h4 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
 h3 {
     font-size: 20px;
     margin-top: 10px;
@@ -58,6 +64,9 @@ img {
 .header-name {
     font-family: 'Lato', sans-serif; font-weight: 300;
     font-size: 30px;
+}
+.text-right {
+    text-align: right;
 }
 
 /* Footer Classes */
