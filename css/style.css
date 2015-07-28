@@ -86,6 +86,12 @@ img {
 .text-right {
     text-align: right;
 }
+.text-center {
+  text-align: center;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
 
 /* Footer Classes */
 .footer {
